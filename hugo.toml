@@ -33,3 +33,9 @@ defaultContentLanguageInSubdir = false
     emit_metadata = "0"
     input_position = "bottom"
     theme = "preferred_color_scheme"
+[output]
+  [output.rss]
+    enable = true
+
+  [output.atom]
+    enable = true
