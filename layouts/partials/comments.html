@@ -9,7 +9,7 @@
     {{- $emitMetadata := default "0" (index . "emit_metadata") }}
     {{- $inputPosition := default "bottom" (index . "input_position") }}
     {{- $theme := default "preferred_color_scheme" (index . "theme") }}
-    {{- $lang := default "en" (index . "lang") }}
+    {{- $lang := $.Language.Lang }}
 <section class="mt-5 pt-4 border-top" aria-labelledby="comments-title">
   <h2 id="comments-title" class="h4 mb-3">Comments</h2>
   <script src="https://giscus.app/client.js"

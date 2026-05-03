@@ -1,18 +1,35 @@
 baseURL = "https://ferez96.com/blog"
-languageCode = "en-us"
 title = "Ferez's blog"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    contentDir = "content/en"
+    title = "Ferez's blog"
+    [languages.en.params]
+      description = "Personal blog powered by Hugo."
+
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    languageCode = "vi"
+    weight = 2
+    contentDir = "content/vi"
+    title = "Blog của Ferez"
+    [languages.vi.params]
+      description = "Blog cá nhân."
 
 [params]
-  description = "Personal blog powered by Hugo."
-
-[params.giscus]
-  repo = "ferez96/ferez96.github.io"
-  repo_id = "MDEwOlJlcG9zaXRvcnkxODczODQxNjk="
-  category = "General"
-  category_id = "DIC_kwDOCytBac4C74Vo"
-  mapping = "pathname"
-  reactions_enabled = "1"
-  emit_metadata = "0"
-  input_position = "bottom"
-  theme = "preferred_color_scheme"
-  lang = "en"
+  [params.giscus]
+    repo = "ferez96/ferez96.github.io"
+    repo_id = "MDEwOlJlcG9zaXRvcnkxODczODQxNjk="
+    category = "General"
+    category_id = "DIC_kwDOCytBac4C74Vo"
+    mapping = "pathname"
+    reactions_enabled = "1"
+    emit_metadata = "0"
+    input_position = "bottom"
+    theme = "preferred_color_scheme"

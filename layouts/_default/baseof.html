@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ .Language.Lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,8 +10,14 @@
 </head>
 <body class="bg-light d-flex flex-column min-vh-100">
   <header class="border-bottom bg-white shadow-sm">
-    <div class="container py-3">
-      <a class="fw-bold text-dark text-decoration-none" href="/">{{ site.Title }}</a>
+    <div class="container py-3 d-flex align-items-center">
+      <a class="fw-bold text-dark text-decoration-none" href="{{ .Site.Home.RelPermalink }}">{{ site.Title }}</a>
+      <div class="ms-auto d-flex gap-2">
+        {{ range .AllTranslations }}
+        <a class="btn btn-sm {{ if eq .Language.Lang $.Site.Language.Lang }}btn-secondary{{ else }}btn-outline-secondary{{ end }}"
+           href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+        {{ end }}
+      </div>
     </div>
   </header>
   <main class="container py-4 flex-grow-1">
