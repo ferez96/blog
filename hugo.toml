@@ -3,6 +3,12 @@ title = "Ferez's blog"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+copyright = '© 2026 Duong Thai Minh. All rights reserved.'
+[params]
+  [params.author]
+    email = 'minh9a4@gmail.com'
+    name = 'Duong Thai Minh'
+
 [languages]
   [languages.en]
     languageName = "English"
@@ -33,9 +39,9 @@ defaultContentLanguageInSubdir = false
     emit_metadata = "0"
     input_position = "bottom"
     theme = "preferred_color_scheme"
-[output]
-  [output.rss]
-    enable = true
 
-  [output.atom]
-    enable = true
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
