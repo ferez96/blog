@@ -1,0 +1,36 @@
+{{- with site.Params.giscus }}
+  {{- $repo := index . "repo" }}
+  {{- $repoID := index . "repo_id" }}
+  {{- if and $repo $repoID }}
+    {{- $category := index . "category" }}
+    {{- $categoryID := index . "category_id" }}
+    {{- $mapping := default "pathname" (index . "mapping") }}
+    {{- $reactionsEnabled := default "1" (index . "reactions_enabled") }}
+    {{- $emitMetadata := default "0" (index . "emit_metadata") }}
+    {{- $inputPosition := default "bottom" (index . "input_position") }}
+    {{- $theme := default "preferred_color_scheme" (index . "theme") }}
+    {{- $lang := default "en" (index . "lang") }}
+<section class="mt-5 pt-4 border-top" aria-labelledby="comments-title">
+  <h2 id="comments-title" class="h4 mb-3">Comments</h2>
+  <script src="https://giscus.app/client.js"
+    data-repo="{{ $repo }}"
+    data-repo-id="{{ $repoID }}"
+    {{- with $category }}
+    data-category="{{ . }}"
+    {{- end }}
+    {{- with $categoryID }}
+    data-category-id="{{ . }}"
+    {{- end }}
+    data-mapping="{{ $mapping }}"
+    data-strict="0"
+    data-reactions-enabled="{{ $reactionsEnabled }}"
+    data-emit-metadata="{{ $emitMetadata }}"
+    data-input-position="{{ $inputPosition }}"
+    data-theme="{{ $theme }}"
+    data-lang="{{ $lang }}"
+    crossorigin="anonymous"
+    async>
+  </script>
+</section>
+  {{- end }}
+{{- end }}

@@ -1,0 +1,18 @@
+baseURL = "https://ferez96.com/blog"
+languageCode = "en-us"
+title = "Ferez's blog"
+
+[params]
+  description = "Personal blog powered by Hugo."
+
+[params.giscus]
+  repo = "ferez96/ferez96.github.io"
+  repo_id = "MDEwOlJlcG9zaXRvcnkxODczODQxNjk="
+  category = "General"
+  category_id = "DIC_kwDOCytBac4C74Vo"
+  mapping = "pathname"
+  reactions_enabled = "1"
+  emit_metadata = "0"
+  input_position = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "en"

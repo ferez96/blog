@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1 class="h2 mb-4">Latest posts</h1>
+{{ if gt (len site.RegularPages) 0 }}
+<ul class="list-unstyled mb-0">
+  {{ range site.RegularPages.ByDate.Reverse }}
+  <li class="d-flex justify-content-between align-items-baseline gap-3 py-3 border-bottom">
+    <a href="{{ .RelPermalink }}" class="link-dark text-decoration-none">{{ .Title }}</a>
+    <small class="text-muted text-nowrap flex-shrink-0">{{ .Date.Format "2006-01-02" }}</small>
+  </li>
+  {{ end }}
+</ul>
+{{ else }}
+<p class="text-secondary mb-0">No posts yet.</p>
+{{ end }}
+{{ end }}

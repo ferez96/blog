@@ -1,0 +1,10 @@
+{{ define "main" }}
+<article>
+  <h1 class="mb-2">{{ .Title }}</h1>
+  <p class="text-muted small mb-4">{{ .Date.Format "2006-01-02" }}</p>
+  <div class="blog-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ partial "comments.html" . }}
+{{ end }}
