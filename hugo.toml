@@ -2,12 +2,7 @@ baseURL = "https://ferez96.com/blog"
 title = "Ferez's blog"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
-
 copyright = '© 2026 Duong Thai Minh. All rights reserved.'
-[params]
-  [params.author]
-    email = 'minh9a4@gmail.com'
-    name = 'Duong Thai Minh'
 
 [languages]
   [languages.en]
@@ -29,11 +24,14 @@ copyright = '© 2026 Duong Thai Minh. All rights reserved.'
       description = "Blog cá nhân."
 
 [params]
+  [params.author]
+    email = 'minh9a4@gmail.com'
+    name = 'Duong Thai Minh'
   [params.giscus]
-    repo = "ferez96/ferez96.github.io"
-    repo_id = "MDEwOlJlcG9zaXRvcnkxODczODQxNjk="
-    category = "General"
-    category_id = "DIC_kwDOCytBac4C74Vo"
+    repo = "ferez96/blog"
+    repo_id = "R_kgDOSTIULw"
+    category = "Announcements"
+    category_id = "DIC_kwDOSTIUL84C8QiB"
     mapping = "pathname"
     reactions_enabled = "1"
     emit_metadata = "0"
